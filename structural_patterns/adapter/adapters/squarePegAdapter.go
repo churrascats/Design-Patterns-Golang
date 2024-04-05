@@ -6,7 +6,6 @@ import (
 )
 
 type SquarePegAdapter struct {
-	products.RoundPeg
 	SquarePeg products.SquarePeg
 }
 
