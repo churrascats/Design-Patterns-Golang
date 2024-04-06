@@ -3,14 +3,14 @@ package proxy
 import "proxy/service"
 
 type ServiceProxy struct {
-	app               service.App
+	app               service.Server
 	maxAllowedRequest int
 	rateLimiter       map[string]int
 }
 
 func NewServiceProxy() *ServiceProxy {
 	return &ServiceProxy{
-		app:               service.App{},
+		app:               &service.App{},
 		maxAllowedRequest: 2,
 		rateLimiter:       make(map[string]int),
 	}
